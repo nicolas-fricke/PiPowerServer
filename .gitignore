@@ -33,3 +33,10 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Log files
+log/
+
+# VIM files
+*.swp
+*.un~
