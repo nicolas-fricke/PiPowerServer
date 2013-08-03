@@ -1,17 +1,49 @@
 <html>
   <head>
     <title>Pi Power Control</title>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/amelia/bootstrap.min.css" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+          $("#switch-1-on").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "1", on_off: "1" } );
+          });
+          $("#switch-1-off").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "1", on_off: "0" } );
+          });
+          $("#switch-2-on").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "2", on_off: "1" } );
+          });
+          $("#switch-2-off").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "2", on_off: "0" } );
+          });
+          $("#switch-3-on").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "3", on_off: "1" } );
+          });
+          $("#switch-3-off").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "3", on_off: "0" } );
+          });
+          $("#switch-4-on").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "4", on_off: "1" } );
+          });
+          $("#switch-4-off").click(function() {
+            $.post("switch_socket", { system: "01111", socket: "4", on_off: "0" } );
+          });
+      });
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="content">
         <h1>Pi Control</h1>
-        <form action="/switch_socket" method="POST">
-          <input type="hidden" name="system" />
-          <input type="hidden" name="socket" />
-          <input type="hidden" name="on_off" />
-          <input type="submit" name="submit" value="switch!" />
-        </form>
+        <a href="#" id="switch-1-on"  class="btn btn-success" >Switch 1 on</a>
+        <a href="#" id="switch-1-off" class="btn btn-primary" >Switch 1 off</a>
+        <a href="#" id="switch-2-on"  class="btn btn-success" >Switch 2 on</a>
+        <a href="#" id="switch-2-off" class="btn btn-primary" >Switch 2 off</a>
+        <a href="#" id="switch-3-on"  class="btn btn-success" >Switch 3 on</a>
+        <a href="#" id="switch-3-off" class="btn btn-primary" >Switch 3 off</a>
+        <a href="#" id="switch-4-on"  class="btn btn-success" >Switch 4 on</a>
+        <a href="#" id="switch-4-off" class="btn btn-primary" >Switch 4 off</a>
       </div>
     </div>
   <body>
