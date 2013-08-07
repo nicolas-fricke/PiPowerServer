@@ -4,18 +4,95 @@
     <title>Pi Power Control</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link rel="stylesheet" type="text/css" media="screen" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/amelia/bootstrap.min.css" />
+{#    <link rel="stylesheet" type="text/css" media="screen" href="//netdna.bootstrapcdn.com/bootswatch/2.3.2/amelia/bootstrap.min.css" />#}
+
+    <!-- Nice fonts -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lobster">
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <style type="text/css">
-      a.btn {
-        width: 30%;
-        height: 30px;
-        margin: 10px;
+      body {
+        padding-top: 65px;
+        background-color: #0f8790;
+        color: white;
+        line-height: 20px;
+        font-family: 'Cabin',Verdana,sans-serif;
+        font-size: 14px;
       }
+
+      .container {
+        width: 85%;
+        margin: auto;
+      }
+
+      .navbar-fixed-top {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        margin-bottom: 0;
+      }
+
+      .navbar-inner {
+        min-height: 50px;
+        background-color: #ad1d28;
+        border: 1px solid #79141c;
+      }
+
+      .brand {
+        display: block;
+        float: left;
+      }
+      .navbar .brand {
+        padding: 15px 20px 14px;
+        font-family: 'Lobster',cursive;
+        font-size: 24px;
+        font-weight: normal;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: 'Lobster',cursive;
+      }
+
+      .btn-group {
+        width: 100%;
+        margin-left: 10px;
+      }
+
+      a.btn {
+        background-color: #ddd;
+        color: white;
+        text-decoration: none;
+
+        display: inline-block;
+
+        padding: 2% 0;
+        width: 40%;
+        margin: 0 2% 0 2%;
+        text-align: center;
+      }
+
+      a.btn.btn-on {
+        background-color: #48ca3b;
+      }
+
+      a.btn.btn-on:hover {
+        background-color: #3eb932;
+      }
+
+      a.btn.btn-off {
+        background-color: #ad1d28;
+      }
+
+      a.btn.btn-off:hover {
+        background-color: #971923;
+      }
+
+
     </style>
 
     <script type="text/javascript">
@@ -48,24 +125,34 @@
     </script>
   </head>
   <body>
+    <div id="main-navigation" class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand">Pi Control</a>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row">
-        <h1>Pi Control</h1>
-        <div class="col-lg-3">
-          <a href="#" id="switch-1-on"  class="btn btn-success" >Switch 1 on</a>
-          <a href="#" id="switch-1-off" class="btn btn-primary" >Switch 1 off</a>
+        <div class="btn-group col-sm-3 pull-left">
+          <h2>Switch 1</h2>
+          <a href="#" id="switch-1-on"  class="btn btn-on" >on</a>
+          <a href="#" id="switch-1-off" class="btn btn-off" >off</a>
         </div>
-        <div class="col-lg-3">
-          <a href="#" id="switch-2-on"  class="btn btn-success" >Switch 2 on</a>
-          <a href="#" id="switch-2-off" class="btn btn-primary" >Switch 2 off</a>
+        <div class="btn-group col-sm-3 pull-left">
+          <h2>Switch 2</h2>
+          <a href="#" id="switch-2-on"  class="btn btn-on" >on</a>
+          <a href="#" id="switch-2-off" class="btn btn-off" >off</a>
         </div>
-        <div class="col-lg-3">
-          <a href="#" id="switch-3-on"  class="btn btn-success" >Switch 3 on</a>
-          <a href="#" id="switch-3-off" class="btn btn-primary" >Switch 3 off</a>
+        <div class="btn-group col-sm-3 pull-left">
+          <h2>Switch 3</h2>
+          <a href="#" id="switch-3-on"  class="btn btn-on" >on</a>
+          <a href="#" id="switch-3-off" class="btn btn-off" >off</a>
         </div>
-        <div class="col-lg-3">
-          <a href="#" id="switch-4-on"  class="btn btn-success" >Switch 4 on</a>
-          <a href="#" id="switch-4-off" class="btn btn-primary" >Switch 4 off</a>
+        <div class="btn-group col-sm-3 pull-left">
+          <h2>Switch 4</h2>
+          <a href="#" id="switch-4-on"  class="btn btn-on" >on</a>
+          <a href="#" id="switch-4-off" class="btn btn-off" >off</a>
         </div>
       </div>
     </div>
